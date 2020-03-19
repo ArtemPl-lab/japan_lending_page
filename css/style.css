@@ -241,6 +241,60 @@ header {
 .places-cards{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    column-gap: 10px;
+    gap: 10px;
+}
+.places-card-lg{
+  grid-column: span 3;
+}
+.pl-card-pic{
+  width: 100%;
+  transition: .2s all;
+}
+.places-card{
+  position: relative;
+  overflow: hidden;
+  
+}
+.places-card::after{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 24, 36, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.places-card-title{
+  font-size: 50px;
+  line-height: 60px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  z-index: 3;
+}
+.places-card:hover .pl-card-pic{
+  transform: scale(1.1);
+}
+.pl-card-link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+.places-card-sm{
+  grid-column: span 2;
+}
+.pic-lg{
+  height: 354px;
+  object-fit: cover;
+}
+.pic-sm{
+  height: 283px;
+  object-fit: cover;
 }
 /* places start end */
